@@ -49,7 +49,7 @@ class BaseConfiguration(object):
 
     if db_type == 1:
         db_dialect = 'sqlite'
-        db_path = os.path.join(basedir, db_name)
+        db_path = os.path.join(basedir,"db", db_name)
         SQLALCHEMY_DATABASE_URI = f'{db_dialect}:{sql_os_path_prefix}{db_path}'
 
     else:
