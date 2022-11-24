@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/7985c06b-39b8-4dbd-b597-c5ac2e89b161/AppServices/subscriptions/7985c06b-39b8-4dbd-b597-c5ac2e89b161/resourceGroups/anzwiri/providers/Microsoft.Web/sites/testappwiri",
+    "appService.deploySubpath": "."
+}

@@ -5,19 +5,15 @@
 
 from datetime import datetime
 
-from flask import g
-from flask import redirect
-from flask import request
-from flask import make_response
-from flask import render_template
-from flask import Response
-from flask import url_for
+from flask import (Response, g, make_response, redirect, render_template,
+                   request, url_for)
 from flask_babel import gettext
 from flask_login import login_required
 
 from application import app
 from application.flicket.forms.search import SearchTicketForm
 from application.flicket.models.flicket_models import FlicketTicket
+
 from . import flicket_bp
 
 
@@ -77,7 +73,7 @@ def tickets_view(page, is_my_view=False, subscribed=False):
 
     number_results = ticket_query.count()
 
-    ticket_query = ticket_query.paginate(page, app.config['posts_per_page'])
+    ticket_query = ticket_query.paginate(page=page, per_page= app.config['posts_per_page'])
 
     title = gettext('Tickets')
     if is_my_view:
